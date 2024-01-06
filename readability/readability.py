@@ -450,6 +450,8 @@ class Document:
             "nav",
         ]:
             content_score -= 5
+        elif name in ["section"]:
+            content_score -= 25
         return {"content_score": content_score, "elem": elem}
 
     def remove_unlikely_candidates(self):
